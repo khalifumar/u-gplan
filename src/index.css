@@ -1,0 +1,242 @@
+/* UnG Modern Design System - Romantic & Light Edition */
+:root {
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Default Romantic Light Theme */
+  --bg-main: #fff8f9;
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --bg-subtle: rgba(244, 63, 94, 0.04);
+  --bg-input: #ffffff;
+
+  --border-subtle: rgba(244, 114, 182, 0.22);
+  --border-focus: rgba(244, 63, 94, 0.5);
+
+  --text-main: #331d2c;
+  --text-muted: #725265;
+  --text-dim: #a78299;
+
+  /* Romantic Brand Accents */
+  --brand-u: #4f46e5;          /* Umaar */
+  --brand-u-glow: rgba(79, 70, 229, 0.25);
+  --brand-g: #e11d48;          /* Gitaa */
+  --brand-g-glow: rgba(225, 29, 72, 0.25);
+  --brand-both: #ec4899;       /* U & G Bersama */
+  --brand-both-glow: rgba(236, 72, 153, 0.25);
+  --brand-gradient: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #4f46e5 100%);
+  --brand-gold: #f59e0b;
+  --brand-success: #10b981;
+  --brand-danger: #ef4444;
+
+  /* Shadows & Glassmorphism */
+  --shadow-sm: 0 2px 10px rgba(225, 29, 72, 0.05);
+  --shadow-md: 0 10px 28px -5px rgba(225, 29, 72, 0.09), 0 6px 12px -4px rgba(225, 29, 72, 0.04);
+  --shadow-lg: 0 20px 38px -10px rgba(225, 29, 72, 0.12);
+  --glass-blur: blur(14px);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme='dark'] {
+  --bg-main: #140d16;
+  --bg-card: rgba(34, 21, 37, 0.78);
+  --bg-card-hover: rgba(45, 28, 49, 0.88);
+  --bg-subtle: rgba(255, 255, 255, 0.04);
+  --bg-input: rgba(27, 16, 30, 0.7);
+
+  --border-subtle: rgba(244, 114, 182, 0.15);
+  --border-focus: rgba(236, 72, 153, 0.5);
+
+  --text-main: #fff1f5;
+  --text-muted: #d4a5b8;
+  --text-dim: #947182;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 35px -10px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(at 5% 5%, rgba(244, 63, 94, 0.08) 0px, transparent 45%),
+    radial-gradient(at 95% 95%, rgba(236, 72, 153, 0.08) 0px, transparent 45%),
+    radial-gradient(at 50% 40%, rgba(79, 70, 229, 0.05) 0px, transparent 55%),
+    radial-gradient(at 20% 80%, rgba(251, 113, 133, 0.06) 0px, transparent 50%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 114, 182, 0.3);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 63, 94, 0.5);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+  color: var(--text-main);
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.glass-card:hover {
+  border-color: rgba(244, 114, 182, 0.4);
+  box-shadow: var(--shadow-md);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Romantic Colors */
+.text-romantic-rose {
+  color: #f43f5e;
+}
+.fill-romantic-rose {
+  fill: #f43f5e;
+}
+
+/* Partner Badges */
+.badge-u {
+  background: rgba(79, 70, 229, 0.12);
+  color: #4f46e5;
+  border: 1px solid rgba(79, 70, 229, 0.25);
+}
+
+.badge-g {
+  background: rgba(225, 29, 72, 0.12);
+  color: #e11d48;
+  border: 1px solid rgba(225, 29, 72, 0.25);
+}
+
+.badge-both {
+  background: rgba(236, 72, 153, 0.12);
+  color: #db2777;
+  border: 1px solid rgba(236, 72, 153, 0.25);
+}
+
+/* Category Badges */
+.cat-kesehatan, .cat-health {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+.cat-karir, .cat-career {
+  background: rgba(79, 70, 229, 0.12);
+  color: #4f46e5;
+}
+.cat-pengembangan, .cat-mindset, .cat-keahlian, .cat-skills {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+.cat-hubungan, .cat-relationship {
+  background: rgba(244, 63, 94, 0.14);
+  color: #e11d48;
+}
+
+/* Interactive Buttons */
+.btn-primary {
+  background: var(--brand-gradient);
+  color: #ffffff;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.28);
+  font-size: 0.92rem;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 63, 94, 0.38);
+}
+
+.btn-secondary {
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+.btn-secondary:hover {
+  background: rgba(244, 114, 182, 0.12);
+  border-color: rgba(244, 114, 182, 0.35);
+}
+
+.btn-icon {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-icon:hover {
+  color: var(--brand-g);
+  background: rgba(244, 114, 182, 0.12);
+  border-color: rgba(244, 114, 182, 0.35);
+}
