@@ -1,9 +1,3 @@
-# 💖 Umaar & Gitaa (U&G Plan)
-
-Platform saling mengabari kegiatan, memantau jadwal, dan saling menyemangati (support) antara **Umaar** dan **Gitaa**.
-
----
-
 ## ✨ Fitur Utama
 
 1. **Kabar & Support (Live Updates & Love Notes)**
